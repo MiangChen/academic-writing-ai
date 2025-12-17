@@ -5,7 +5,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SETUP_MARKER="$SCRIPT_DIR/.setup_done"
 CONFIG_FILE="$SCRIPT_DIR/config_llm.json"
-ENV_NAME="academic_writing_311"
+ENV_NAME="academic_writing_314"
 
 # 颜色输出
 RED='\033[0;31m'

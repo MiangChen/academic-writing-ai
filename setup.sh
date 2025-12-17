@@ -6,7 +6,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_FILE="$SCRIPT_DIR/config_llm.json"
 CONFIG_EXAMPLE="$SCRIPT_DIR/config_llm_example.json"
 SETUP_MARKER="$SCRIPT_DIR/.setup_done"
-ENV_NAME="academic_writing_311"
+ENV_NAME="academic_writing_314"
 
 # 颜色输出
 RED='\033[0;31m'
@@ -27,7 +27,7 @@ echo -e "${YELLOW}[1/3] 创建 conda 环境 ${ENV_NAME}...${NC}"
 if conda env list | grep -q "^${ENV_NAME} "; then
     echo -e "${GREEN}[Setup] 环境 ${ENV_NAME} 已存在，跳过创建${NC}"
 else
-    if ! conda create -n "$ENV_NAME" python=3.11 -y; then
+    if ! conda create -n "$ENV_NAME" python=3.14 -y; then
         echo -e "${RED}[错误] conda 环境创建失败${NC}"
         exit 1
     fi

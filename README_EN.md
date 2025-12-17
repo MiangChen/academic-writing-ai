@@ -64,7 +64,7 @@ cp academic-writing-ai/styles/ieee-transactions.md .claude/CLAUDE.md
 cp academic-writing-ai/styles/ieee-transactions.md .cursorrules
 ```
 
-### Option 2: Use LangGraph Workflow (Interactive)
+### Option 2: Use LangGraph Workflow (Developing)
 
 We provide an interactive writing workflow based on LangGraph, supporting write-review-revise loops:
 

@@ -64,7 +64,7 @@ cp academic-writing-ai/styles/ieee-transactions.md .claude/CLAUDE.md
 cp academic-writing-ai/styles/ieee-transactions.md .cursorrules
 ```
 
-### 方式二：使用 LangGraph 工作流（交互式）
+### 方式二：使用 LangGraph 工作流（开发中)
 
 我们提供了一个基于 LangGraph 的交互式写作工作流，支持"写-审-改"循环：
 
