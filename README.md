@@ -33,12 +33,7 @@ your-paper-project/
 ### 按期刊分类
 | 期刊 | 风格特点 | 状态 |
 |------|----------|------|
-| Nature | 叙事性、易读、故事驱动 | ✅ 可用 |
-| Science | 钩子开头、强调广泛影响 | 🚧 开发中 |
 | IEEE Transactions | 技术性、正式、结构化 | ✅ 可用 |
-| ACM | 计算机领域、强调可复现性 | � 开发中 |
-| Cell | 视觉优先、机制导向 | 📋 计划中 |
-| 中文核心期刊 | 八股文结构、规范表达 | 📋 计划中 |
 
 ### 按写作任务分类
 | 任务 | 描述 | 状态 |
@@ -68,24 +63,13 @@ cp academic-writing-ai/styles/nature-style.md .claude/CLAUDE.md
 cp academic-writing-ai/styles/nature-style.md .cursorrules
 ```
 
-## 参与贡献
-
-欢迎贡献！详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
-
 ### 如何贡献新风格
 1. Fork 本仓库
 2. 创建 `styles/your-journal-style.md`
 3. 包含：语气风格指南、结构模板、常用短语、常见错误
 4. 提交 PR，附带修改前后的示例
 
-## 项目理念
-
-> "作为曾经在'有好想法'和'用正确的风格表达出来'之间挣扎过的研究者，我们希望把那些以前只有通过昂贵工具或资深导师才能获得的写作指导，开放给所有人。"
-
 ## 相关项目
 
 - [academic-graph-ai](https://github.com/MiangChen/academic-graph-ai) — AI 辅助论文绘图
 
-## 许可证
-
-MIT — 自由使用，欢迎回馈。
