@@ -46,24 +46,61 @@ your-paper-project/
 
 ## 快速开始
 
-### Kiro 用户
+### 方式一：复制 Prompt 到你的 AI 助手
+
+#### Kiro 用户
 ```bash
-# 在你的论文项目中
 mkdir -p .kiro/steering
 cp academic-writing-ai/styles/ieee-transactions.md .kiro/steering/
 ```
 
-### Claude Code 用户
+#### Claude Code 用户
 ```bash
-cp academic-writing-ai/styles/nature-style.md .claude/CLAUDE.md
+cp academic-writing-ai/styles/ieee-transactions.md .claude/CLAUDE.md
 ```
 
-### Cursor 用户
+#### Cursor 用户
 ```bash
-cp academic-writing-ai/styles/nature-style.md .cursorrules
+cp academic-writing-ai/styles/ieee-transactions.md .cursorrules
 ```
 
-### 如何贡献新风格
+### 方式二：使用 LangGraph 工作流（交互式）
+
+我们提供了一个基于 LangGraph 的交互式写作工作流，支持"写-审-改"循环：
+
+```bash
+# 1. 安装环境
+bash setup.sh
+
+# 2. 配置 API Key
+cp config_llm_example.json config_llm.json
+# 编辑 config_llm.json 填入你的 API Key
+
+# 3. 启动工作流
+bash start.sh
+```
+
+工作流特性：
+- 🎯 选择期刊风格和章节类型
+- ✍️ 输入研究要点，自动生成草稿
+- 🔄 人在环审核，支持多轮迭代修改
+- 💾 自动保存到 `output/` 目录
+
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│   Write     │ -> │   Review    │ -> │  Finalize   │
+│  生成草稿   │    │  人工审核   │    │  输出结果   │
+└─────────────┘    └──────┬──────┘    └─────────────┘
+                         │ 有反馈
+                         ↓
+                   ┌─────────────┐
+                   │   Revise    │
+                   │  修改草稿   │
+                   └─────────────┘
+```
+
+## 如何贡献
+
 1. Fork 本仓库
 2. 创建 `styles/your-journal-style.md`
 3. 包含：语气风格指南、结构模板、常用短语、常见错误
@@ -71,5 +108,5 @@ cp academic-writing-ai/styles/nature-style.md .cursorrules
 
 ## 相关项目
 
-- [academic-graph-ai](https://github.com/MiangChen/academic-graph-ai) — AI 辅助论文绘图
+- [academic-diagram-ai](https://github.com/MiangChen/academic-diagram-ai) — AI 辅助论文绘图
 

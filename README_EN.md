@@ -46,24 +46,61 @@ Simply copy the relevant style guide into your project, and your AI assistant wi
 
 ## Quick Start
 
-### For Kiro Users
+### Option 1: Copy Prompts to Your AI Assistant
+
+#### For Kiro Users
 ```bash
-# In your paper project
 mkdir -p .kiro/steering
 cp academic-writing-ai/styles/ieee-transactions.md .kiro/steering/
 ```
 
-### For Claude Code Users
+#### For Claude Code Users
 ```bash
-cp academic-writing-ai/styles/nature-style.md .claude/CLAUDE.md
+cp academic-writing-ai/styles/ieee-transactions.md .claude/CLAUDE.md
 ```
 
-### For Cursor Users
+#### For Cursor Users
 ```bash
-cp academic-writing-ai/styles/nature-style.md .cursorrules
+cp academic-writing-ai/styles/ieee-transactions.md .cursorrules
 ```
 
-### How to Contribute a New Style
+### Option 2: Use LangGraph Workflow (Interactive)
+
+We provide an interactive writing workflow based on LangGraph, supporting write-review-revise loops:
+
+```bash
+# 1. Setup environment
+bash setup.sh
+
+# 2. Configure API Key
+cp config_llm_example.json config_llm.json
+# Edit config_llm.json with your API Key
+
+# 3. Start workflow
+bash start.sh
+```
+
+Workflow features:
+- 🎯 Select journal style and section type
+- ✍️ Input research points, auto-generate draft
+- 🔄 Human-in-the-loop review with iterative refinement
+- 💾 Auto-save to `output/` directory
+
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│   Write     │ -> │   Review    │ -> │  Finalize   │
+│  Generate   │    │  Human      │    │  Output     │
+└─────────────┘    └──────┬──────┘    └─────────────┘
+                         │ feedback
+                         ↓
+                   ┌─────────────┐
+                   │   Revise    │
+                   │  Refine     │
+                   └─────────────┘
+```
+
+## Contributing
+
 1. Fork this repo
 2. Create `styles/your-journal-style.md`
 3. Include: voice/tone guidelines, structure templates, example phrases, common pitfalls
@@ -71,4 +108,4 @@ cp academic-writing-ai/styles/nature-style.md .cursorrules
 
 ## Related Projects
 
-- [academic-graph-ai](https://github.com/MiangChen/academic-graph-ai) — AI-assisted figure generation for papers
+- [academic-diagram-ai](https://github.com/MiangChen/academic-diagram-ai) — AI-assisted figure generation for papers

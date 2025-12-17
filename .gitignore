@@ -1,0 +1,26 @@
+# 配置文件（包含 API Key）
+config_llm.json
+
+# 安装标记
+.setup_done
+
+# 输出目录
+output/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
