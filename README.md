@@ -9,7 +9,7 @@
 市面上的 AI 写作工具都绑定自家模型，还要收订阅费。我们认为学术写作辅助应该是：
 
 - **免费开源** — 没有付费墙，没有厂商锁定
-- **自带模型（BYOM）** — 兼容 Claude Code、Codex CLI、Kiro、Cursor 等任何 AI 助手
+- **任意切换** — 兼容 Claude Code、Codex CLI、Kiro、Cursor 等任何 AI 助手
 - **社区驱动** — 所有人都可以贡献不同期刊和写作风格的 Prompt
 
 ## 工作原理
